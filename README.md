@@ -132,6 +132,22 @@ The **/student/<<int:student_number>>** is a link dedicated for retrieiving, upd
  {}
 ```
 
+##Test Case
+Django also has a test driven environment where in the developer can test the created links specified above.
+In the **central/test.py** i created a multiple test for each method available for the links
+To run this test simply run the following command on the project directory:
+```python
+python manage.py test
+```
+
+We can also test the links manually, using the software **POSTMAN**
+to run test the links manually, run the server and use the browsable urls below:
+
+```python
+http://127.0.0.1:8000/student
+http://127.0.0.1:8000/student/<<int:student_number>>
+```
+
 
 
 
