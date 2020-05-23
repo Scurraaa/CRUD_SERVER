@@ -31,8 +31,11 @@ This CRUD Server has two (2) available links
 
 The **/student** link dedicated to add a single record on the database and retrieiving all records in the database
 **Sample Response:**
-###GET Method
+
+### GET Method
+
 **200 response**
+
 ```json
 [
  {
@@ -47,11 +50,14 @@ The **/student** link dedicated to add a single record on the database and retri
  ...
 ]
 ```
+
 **400 response**
 ```json
  { "details": "No student is currently registered" }
 ```
-###POST Method
+
+### POST Method
+
 ** 201 response**
 ```json
  {
@@ -60,6 +66,7 @@ The **/student** link dedicated to add a single record on the database and retri
 ```
 
 ** 400 response**
+
 ```json
  {
    "details": "Request Failed, please double check youe inputs"
@@ -69,8 +76,11 @@ The **/student** link dedicated to add a single record on the database and retri
 
 The **/student/<int:student_number>** is a link dedicated for retrieiving, updating and deleting a single record on the database the link requires a integer called student_number to br used in the query later.
 **Sample Response:**
-###GET Method
+
+### GET Method
+
 **200 response (/student/1510688)**
+
 ```json
  {
    "student_number": "1510688",
@@ -83,13 +93,16 @@ The **/student/<int:student_number>** is a link dedicated for retrieiving, updat
  }
 ```
 
-**400 response (/student/10000)
+**400 response (/student/10000)**
+
 ```json
 { "details": "No Data found" }
 ```
 
-###PUT Method
+### PUT Method
+
 **200 response(/student/1510688)**
+
 ```json
 { "details": "Update Success", 
   "updated_data": 
@@ -105,12 +118,13 @@ The **/student/<int:student_number>** is a link dedicated for retrieiving, updat
 }
 ```
 
-**400 response (/student/10000)
+**400 response (/student/10000)**
 ```json
 { "details": "No Data found" }
 ```
 
-###DELETE Method
+### DELETE Method
+
 **204 response (/student/1510688)**
 ```json
  {}
