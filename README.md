@@ -19,11 +19,17 @@ To run this SERVER you must have the following software on your computer
 **Step 3:** 
 To install additional Python Dependencies of the project you can run the following command on the project folder
 ```python
-   pip install -r requirements.txt
+pip install -r requirements.txt
   ```
 
 ## :arrow_forward: How to Run the Server
 To run this API Server run the following command on the project folder
 ```python
-   python manage.py runservee
+python manage.py runserver
   ```
+This CRUD Server has two (2) available links
+* /student
+
+The */student* link function is to add a single record on the database and retrieiving all records in the database
+Sample output is below:
+
