@@ -29,7 +29,23 @@ python manage.py runserver
   ```
 This CRUD Server has two (2) available links
 * /student
+* /student/<int:student_number>
 
 The */student* link function is to add a single record on the database and retrieiving all records in the database
 Sample output is below:
+200 response:
+```json
+[
+{
+  "student_number": "1510688",
+  "first_name": "Joshua",
+  "middle_initial": "C.",
+  "last_name": "Bacani",
+  "year_level": "5th",
+  "program": "BSCPE",
+  "password": "test123",
+}
+...
+]
+```
 
