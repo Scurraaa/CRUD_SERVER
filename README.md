@@ -141,7 +141,7 @@ python manage.py test
 ```
 
 We can also test the links manually, using the software **POSTMAN**
-to run test the links manually, run the server and use the browsable urls below:
+to test the links manually, run the server and use the browsable urls below:
 
 ```python
 http://127.0.0.1:8000/student
