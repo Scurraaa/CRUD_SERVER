@@ -31,21 +31,52 @@ This CRUD Server has two (2) available links
 * /student
 * /student/<int:student_number>
 
-The */student* link function is to add a single record on the database and retrieiving all records in the database
+The **/student** link function is to add a single record on the database and retrieiving all records in the database
 Sample output is below:
-200 response:
+
+**200 response (GET Method)**
 ```json
 [
-{
-  "student_number": "1510688",
-  "first_name": "Joshua",
-  "middle_initial": "C.",
-  "last_name": "Bacani",
-  "year_level": "5th",
-  "program": "BSCPE",
-  "password": "test123",
-}
-...
+ {
+   "student_number": "1510688",
+   "first_name": "Joshua",
+   "middle_initial": "C.",
+   "last_name": "Bacani",
+   "year_level": "5th",
+   "program": "BSCPE",
+   "password": "test123",
+ }
+ ...
 ]
 ```
+**400 response (GET Method)**
+```json
+[
+ { "details": "No student is currently registered" }
+]
+```
+
+** 201 response (POST Method)
+```json
+[
+ {
+   "details": "Request Success"
+ }
+]
+```
+
+** 400 response (POST Method)
+```json
+[
+ {
+   "details": "Request Failed, please double check youe inputs"
+ }
+
+]
+```
+
+
+
+
+
 
