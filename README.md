@@ -1,7 +1,5 @@
 # CRUD_SERVER
-This is a API Server created in Python using the Django REST Framework
-
-
+This is a API Server created in Python using the Django REST Framework. This Server is created for the registration of student.
 
 ## :arrow_up: How to Setup
 ### Requirements
@@ -31,10 +29,10 @@ This CRUD Server has two (2) available links
 * /student
 * /student/<int:student_number>
 
-The **/student** link function is to add a single record on the database and retrieiving all records in the database
-Sample output is below:
-
-**200 response (GET Method)**
+The **/student** link dedicated to add a single record on the database and retrieiving all records in the database
+**Sample Response:**
+###GET Method
+**200 response**
 ```json
 [
  {
@@ -49,31 +47,78 @@ Sample output is below:
  ...
 ]
 ```
-**400 response (GET Method)**
+**400 response**
 ```json
-[
  { "details": "No student is currently registered" }
-]
 ```
-
-** 201 response (POST Method)
+###POST Method
+** 201 response**
 ```json
-[
  {
    "details": "Request Success"
  }
-]
 ```
 
-** 400 response (POST Method)
+** 400 response**
 ```json
-[
  {
    "details": "Request Failed, please double check youe inputs"
  }
 
-]
 ```
+
+The **/student/<int:student_number>** is a link dedicated for retrieiving, updating and deleting a single record on the database the link requires a integer called student_number to br used in the query later.
+**Sample Response:**
+###GET Method
+**200 response (/student/1510688)**
+```json
+ {
+   "student_number": "1510688",
+   "first_name": "Joshua",
+   "middle_initial": "C.",
+   "last_name": "Bacani",
+   "year_level": "5th",
+   "program": "BSCPE",
+   "password": "test123",
+ }
+```
+
+**400 response (/student/10000)
+```json
+{ "details": "No Data found" }
+```
+
+###PUT Method
+**200 response(/student/1510688)**
+```json
+{ "details": "Update Success", 
+  "updated_data": 
+  { 
+    "student_number": "1510622", 
+    "first_name": "joshua", 
+    "middle_initial": "D.", 
+    "last_name": "Roger", 
+    "year_level": "4th", 
+    "program": "BSCE", 
+    "password": "dsa12312333" 
+   } 
+}
+```
+
+**400 response (/student/10000)
+```json
+{ "details": "No Data found" }
+```
+
+###DELETE Method
+**204 response (/student/1510688)**
+```json
+ {}
+```
+
+
+
+
 
 
 
