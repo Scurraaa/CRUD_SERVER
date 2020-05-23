@@ -17,7 +17,7 @@ To run this SERVER you must have the following software on your computer
 **Step 3:** 
 To install additional Python Dependencies of the project you can run the following command on the project folder
 ```python
-pip install -r requirements.txt
+pip install -r requirement.txt
   ```
 
 ## :arrow_forward: How to Run the Server
