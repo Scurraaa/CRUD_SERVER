@@ -31,7 +31,7 @@ This CRUD Server has two (2) available links
 
 The **/student** is a link dedicated to add a single record on the database and retrieiving all records in the database
 
-**Sample Response:**
+**Sample Response for the link /student:**
 
 ### GET Method
 
@@ -77,7 +77,7 @@ The **/student** is a link dedicated to add a single record on the database and 
 
 The **/student/<<int:student_number>>** is a link dedicated for retrieiving, updating and deleting a single record on the database the link requires a integer called student_number to be used in the query later.
 
-**Sample Response:**
+**Sample Response for the link /student/<<int:student_number>>:**
 
 ### GET Method
 
